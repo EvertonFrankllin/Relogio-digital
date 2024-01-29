@@ -27,6 +27,7 @@ function updateClock() {
 
 });
 */
+
 document.addEventListener("DOMContentLoaded", function(){
 const elementHours = document.getElementById('hours');
 const elementMinute = document.getElementById('minutes');
@@ -38,13 +39,13 @@ var hours = date.getHours();
 var minutes = date.getMinutes();
 var seconds = date.getSeconds();
 
-elementHours.textContent = fixTime(hours);
-elementMinute.textContent =fixTime( minutes);
-elementSecond.textContent = fixTime(seconds);
+elementHours.textContent = beforeTime(hours);
+elementMinute.textContent =beforeTime(minutes);
+elementSecond.textContent = beforeTime(seconds);
 
 }
 
-function fixTime(time){
+function beforeTime(time){
     if(time < 10){
         return "0" + time;
     }else{
